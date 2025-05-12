@@ -1,0 +1,108 @@
+---
+title: "Understanding Multicollinearity with Linear Regression in R"
+author: "Sudheesh Sreenilayam"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    theme: flatly
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# 📌 Introduction
+
+This project explores the concept of **multicollinearity** in linear regression using synthetic data. We simulate two correlated predictors and analyze how their relationship affects model interpretation. Additionally, we inject an outlier to observe its influence on regression diagnostics.
+
+# 🧪 Simulating Correlated Data
+
+```{r simulate-data}
+set.seed(1)  # For reproducibility
+
+# Generate independent variables
+x1 <- runif(100)
+x2 <- 0.5 * x1 + rnorm(100) / 10  # x2 is correlated with x1
+
+# Create dependent variable
+y <- 2 + 2 * x1 + 0.3 * x2 + rnorm(100)
+```
+
+### 🔍 Check Correlation Between x1 and x2
+
+```{r correlation}
+cor(x1, x2)  # ~0.83 indicates high correlation
+plot(x2 ~ x1, main = "Scatter Plot of x2 vs x1")
+```
+
+**Interpretation:** The correlation between `x1` and `x2` is approximately 0.83, which is considered high. This confirms the presence of multicollinearity.
+
+# 📉 Fitting Regression Models
+
+## Model 1: Multiple Linear Regression (y ~ x1 + x2)
+```{r model-both}
+model_both <- lm(y ~ x1 + x2)
+summary(model_both)
+```
+
+## Model 2: Simple Regression (y ~ x1)
+```{r model-x1}
+model_x1 <- lm(y ~ x1)
+summary(model_x1)
+```
+
+## Model 3: Simple Regression (y ~ x2)
+```{r model-x2}
+model_x2 <- lm(y ~ x2)
+summary(model_x2)
+```
+
+**Interpretation:**
+
+- In the multiple regression model (`y ~ x1 + x2`), `x1` is significant but `x2` is not.
+- In the individual models, both `x1` and `x2` show significance.
+- This demonstrates the effect of **multicollinearity**, where the shared information between predictors causes one to appear insignificant.
+
+# ⚠️ Adding an Outlier and Rerunning Models
+
+```{r add-outlier}
+x1 <- c(x1, 0.1)
+x2 <- c(x2, 0.8)
+y <- c(y, 6)
+
+# Refit models with outlier
+model_both_outlier <- lm(y ~ x1 + x2)
+model_x1_outlier <- lm(y ~ x1)
+model_x2_outlier <- lm(y ~ x2)
+```
+
+# 🔍 Diagnostic Plots for Outlier Impact
+
+```{r diagnostics-both}
+par(mfrow = c(2, 2))
+plot(model_both_outlier)
+```
+
+**Interpretation:**
+
+- The added data point appears as a **high-leverage outlier**, especially visible in the **Residuals vs Leverage** and **Cook’s Distance** plots.
+- This highlights how a single influential observation can skew the regression model and affect interpretation.
+
+# 🧾 Conclusion
+
+This project demonstrates:
+
+- How **correlated predictors** affect coefficient interpretation in linear regression
+- The importance of checking for **multicollinearity** before trusting model significance levels
+- How **diagnostic plots** can reveal issues like high-leverage points or outliers
+
+This kind of analysis is critical when building real-world predictive models to ensure reliability and interpretability.
+
+# 🔧 Session Info
+```{r session-info}
+sessionInfo()
+```
