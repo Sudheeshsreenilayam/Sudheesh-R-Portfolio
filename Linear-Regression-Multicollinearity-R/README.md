@@ -41,6 +41,12 @@ This project explores how **multicollinearity** affects the interpretation of li
 - R Markdown + xelatex for rendering
 - IDE: Visual Studio Code with R extension
 
+## 🔗 View Report Online
+
+You can view the full interactive report here:  
+👉 [Click to open HTML report](https://sudheeshsreenilayam.github.io/Sudheesh-R-Portfolio/Linear-Regression-Multicollinearity-R/linear_regression_analysis.html)
+
+
 ---
 
 ## 🧑‍💻 Author
