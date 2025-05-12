@@ -46,7 +46,7 @@ The data comes from the `Carseats` dataset in the `ISLR` R package. It includes 
 
 ## 🔗 View Report Online
 
-📄 [Click here to view the project](https://sudheeshsreenilayam.github.io/Sudheesh-R-Portfolio/Tree-Based-Sales-Prediction-R/tree_model_sales.html)  
+📄 [Click here to view the project](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Tree-Based-Sales-Prediction-R/tree_model_sales.html)  
 
 ---
 
