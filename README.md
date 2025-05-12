@@ -1,39 +1,45 @@
-# 🔍 Dissect With Sudheesh
+# 🧠 Dissect With Sudheesh
 
-Welcome to my data analytics and machine learning portfolio — a curated collection of hands-on projects built with R, Python, SQL, PowerBI and Tableau. Each folder contains a self-contained case study with code, output, and key insights.
+Welcome to my analytics portfolio — a collection of hands-on data science and machine learning projects built using **R**, with more to come in **Python**, **SQL**, and **Tableau**. Each folder contains a focused case study with code, output, and key insights.
 
 ---
 
 ## 📁 Project Categories
 
-### 🧠 R Projects
+### 🔬 R Projects
 
 #### 1. [Linear Regression with Multicollinearity](./R-Projects/Linear-Regression-Multicollinearity/)
-- Simulated data showing how correlated predictors impact coefficient interpretation and model performance.
-- 🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Linear-Regression-Multicollinearity/linear_regression_analysis.html)
+A simulation-based analysis demonstrating how multicollinearity affects regression coefficients and model interpretation.  
+🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Linear-Regression-Multicollinearity/linear_regression_analysis.html)
 
 #### 2. [Tree-Based Sales Prediction](./R-Projects/Tree-Based-Sales-Prediction/)
-- Built and compared regression trees, pruning, bagging, and random forests to predict retail sales.
-- 🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Tree-Based-Sales-Prediction/tree_model_sales.html)
+Used decision trees, pruning, bagging, and random forests to predict sales from product attributes and customer factors.  
+🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Tree-Based-Sales-Prediction/tree_model_sales.html)
 
 #### 3. [Boston Crime Regression Analysis](./R-Projects/Boston-Crime-Regression/)
-- Simple linear regression of Boston crime rate against 13 socio-economic factors with visual insights.
-- 🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Boston-Crime-Regression/boston_crime_regression.html)
+Explored how crime rate in Boston correlates with 13 socioeconomic variables using simple linear regression and visualizations.  
+🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Boston-Crime-Regression/boston_crime_regression.html)
 
 ---
 
-### 🐍 Python Projects  
+### 🐍 Python Projects
 Coming soon...
 
-### 🧠 SQL Projects  
+### 🧠 SQL Projects
 Coming soon...
 
-### 📊 Tableau Dashboards  
+### 📊 Tableau Dashboards
 Coming soon...
 
 ---
 
-## 🧑‍💻 Author
+## 🧑‍💻 About Me
 
 **Sudheesh Sreenilayam**  
+🎓 Master’s in Business Analytics  
+📍 Based in Chicago | 🌎 Open to internships and collaboration  
 📎 [Connect on LinkedIn](https://www.linkedin.com/in/ssudheesh)
+
+---
+
+> ⚡ *This portfolio is a live document — more projects are added as I grow and experiment across platforms and tools.*
