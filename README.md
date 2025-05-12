@@ -8,17 +8,17 @@ Welcome to my analytics portfolio — a collection of hands-on data science and 
 
 ### 🔬 R Projects
 
-#### 1. [Linear Regression with Multicollinearity](./R-Projects/Linear-Regression-Multicollinearity/)
+#### 1. [Linear Regression with Multicollinearity](./R-Projects/Linear-Regression-Multicollinearity-R/)
 A simulation-based analysis demonstrating how multicollinearity affects regression coefficients and model interpretation.  
-🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Linear-Regression-Multicollinearity/linear_regression_analysis.html)
+🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Linear-Regression-Multicollinearity-R/linear_regression_analysis.html)
 
-#### 2. [Tree-Based Sales Prediction](./R-Projects/Tree-Based-Sales-Prediction/)
+#### 2. [Tree-Based Sales Prediction](./R-Projects/Tree-Based-Sales-Prediction-R/)
 Used decision trees, pruning, bagging, and random forests to predict sales from product attributes and customer factors.  
-🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Tree-Based-Sales-Prediction/tree_model_sales.html)
+🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Tree-Based-Sales-Prediction-R/tree_model_sales.html)
 
-#### 3. [Boston Crime Regression Analysis](./R-Projects/Boston-Crime-Regression/)
+#### 3. [Boston Crime Regression Analysis](./R-Projects/Boston-Crime-Regression-R/)
 Explored how crime rate in Boston correlates with 13 socioeconomic variables using simple linear regression and visualizations.  
-🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Boston-Crime-Regression/boston_crime_regression.html)
+🔗 [View report](https://sudheeshsreenilayam.github.io/dissect-with-sudheesh/R-Projects/Boston-Crime-Regression-R/boston_crime_regression.html)
 
 ---
 
