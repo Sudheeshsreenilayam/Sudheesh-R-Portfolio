@@ -1,0 +1,126 @@
+---
+title: "Tree-Based Sales Prediction using R"
+author: "Sudheesh Sreenilayam"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    theme: flatly
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# 📌 Introduction
+
+This project explores tree-based regression models to predict product sales using the `Carseats` dataset from the **ISLR** package. Techniques covered include:
+- Regression Trees
+- Cross-validation and pruning
+- Bagging
+- Random Forests with tuned parameters
+- Variable importance interpretation
+
+# 📦 Load Packages and Data
+
+```{r load-packages}
+if (!require("ISLR")) install.packages("ISLR", repos = "https://cloud.r-project.org")
+if (!require("tree")) install.packages("tree", repos = "https://cloud.r-project.org")
+if (!require("randomForest")) install.packages("randomForest", repos = "https://cloud.r-project.org")
+if (!require("caTools")) install.packages("caTools", repos = "https://cloud.r-project.org")
+
+library(ISLR)
+library(tree)
+library(randomForest)
+library(caTools)
+```
+
+# 📊 Load and Split the Data
+
+```{r split-data}
+set.seed(2)
+data <- Carseats
+split <- sample.split(data$Sales, SplitRatio = 0.7)
+train <- subset(data, split == TRUE)
+test <- subset(data, split == FALSE)
+```
+
+# 🌲 Regression Tree
+
+```{r regression-tree}
+tree_model <- tree(Sales ~ ., data = train)
+summary(tree_model)
+plot(tree_model)
+text(tree_model, pretty = 0)
+```
+
+```{r tree-predictions}
+pred_tree <- predict(tree_model, newdata = test)
+mse_tree <- mean((pred_tree - test$Sales)^2)
+mse_tree
+```
+
+**Interpretation:** The regression tree was built using all predictors. The test set MSE provides a baseline for comparison with pruned and ensemble models.
+
+# ✂️ Tree Pruning via Cross-Validation
+
+```{r prune-tree}
+set.seed(2)
+cv <- cv.tree(tree_model)
+plot(cv$size, cv$dev, type = "b", xlab = "Terminal Nodes", ylab = "CV Error")
+```
+
+```{r prune-model}
+pruned_tree <- prune.tree(tree_model, best = 6)
+pred_pruned <- predict(pruned_tree, newdata = test)
+mse_pruned <- mean((pred_pruned - test$Sales)^2)
+mse_pruned
+```
+
+**Interpretation:** Pruning reduced the size of the tree, leading to a slightly improved test MSE, indicating reduced overfitting.
+
+# 👜 Bagging Model (Random Forest with all predictors)
+
+```{r bagging-model}
+set.seed(2)
+bag_model <- randomForest(Sales ~ ., data = train, mtry = 10, importance = TRUE)
+bag_pred <- predict(bag_model, newdata = test)
+mse_bagging <- mean((bag_pred - test$Sales)^2)
+mse_bagging
+importance(bag_model)
+```
+
+**Interpretation:** Bagging improved accuracy significantly over individual trees. `ShelveLoc` and `Price` were the most important predictors.
+
+# 🌲 Random Forest with Tuned mtry
+
+```{r rf-models}
+set.seed(2)
+rf1 <- randomForest(Sales ~ ., data = train, mtry = 5, importance = TRUE)
+rf2 <- randomForest(Sales ~ ., data = train, mtry = 3, importance = TRUE)
+rf3 <- randomForest(Sales ~ ., data = train, mtry = 2, importance = TRUE)
+```
+
+```{r rf-predictions}
+mse_rf1 <- mean((predict(rf1, test) - test$Sales)^2)
+mse_rf2 <- mean((predict(rf2, test) - test$Sales)^2)
+mse_rf3 <- mean((predict(rf3, test) - test$Sales)^2)
+c(mtry_5 = mse_rf1, mtry_3 = mse_rf2, mtry_2 = mse_rf3)
+```
+
+```{r importance-plot}
+varImpPlot(rf2)
+```
+
+**Interpretation:** Random forests performed best with `mtry = 5`. The variable importance plot highlights `ShelveLoc`, `Price`, and `Age` as key predictors.
+
+# 🧾 Conclusion
+
+This project demonstrated how tree-based models can be used for regression tasks. Pruning helped control model complexity, while bagging and random forests greatly improved prediction accuracy by reducing variance. Variable importance plots helped identify the most influential factors in predicting product sales.
+
+# 📌 Session Info
+```{r session-info}
+sessionInfo()
