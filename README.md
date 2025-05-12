@@ -19,6 +19,14 @@ Applied regression trees, pruning, bagging, and random forests to predict produc
 
 🔗 [View Project](https://sudheeshsreenilayam.github.io/Sudheesh-R-Portfolio/Tree-Based-Sales-Prediction-R/tree_model_sales.html)
 
+### 3. [Boston Crime Regression Analysis](./Boston-Crime-Regression-R)
+
+Analyzed crime rates in the Boston housing dataset using simple linear regression for each predictor. Identified strongest relationships and visualized top predictors.
+
+🔗 [View Project](https://sudheeshsreenilayam.github.io/Sudheesh-R-Portfolio/Boston-Crime-Regression-R/boston_crime_regression.html)
+
+---
+
 
 More projects will be added here as I continue exploring and building in R.
 
