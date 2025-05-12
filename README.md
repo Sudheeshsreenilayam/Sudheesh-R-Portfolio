@@ -6,14 +6,19 @@ Welcome to my portfolio of R-based analytics and machine learning projects. Each
 
 ## 🔍 Projects Included
 
+
 ### 1. [Linear Regression with Multicollinearity](./Linear-Regression-Multicollinearity-R)
 
-This project explores how multicollinearity can distort coefficient interpretation in regression models. It includes:
+A simulation-based analysis of how multicollinearity affects regression interpretation and model performance.
 
-- Simulated correlated predictors
-- Comparison of simple vs. multiple regression
-- Impact of a high-leverage outlier
-- Diagnostic plots for model evaluation
+🔗 [View Project](https://sudheeshsreenilayam.github.io/Sudheesh-R-Portfolio/Linear-Regression-Multicollinearity-R/linear_regression_analysis.html)
+
+### 2. [Tree-Based Sales Prediction](./Tree-Based-Sales-Prediction-R)
+
+Applied regression trees, pruning, bagging, and random forests to predict product sales from the Carseats dataset. Includes MSE comparison and variable importance analysis.
+
+🔗 [View Project](https://sudheeshsreenilayam.github.io/Sudheesh-R-Portfolio/Tree-Based-Sales-Prediction-R/tree_model_sales.html)
+
 
 More projects will be added here as I continue exploring and building in R.
 
