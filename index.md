@@ -14,6 +14,12 @@ Hi, I’m **Sudheesh Sreenilayam** — a Business Analytics grad student based i
 
 This is my portfolio of hands-on data science and business analytics projects. I’m currently building in **R**, and will be adding projects in **Python**, **SQL**, and **Tableau** soon.
 
+<p>
+  <a href="./assets/Sudheesh_Sreenilayam_Resume.pdf" download style="display: inline-block; padding: 10px 20px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
+    📄 Download Resume
+  </a>
+</p>
+
 ---
 
 ## 📁 Featured Projects
