@@ -3,9 +3,16 @@ layout: default
 title: Dissect With Sudheesh
 ---
 
+<video autoplay loop muted playsinline width="100%" style="border-radius: 12px; margin-bottom: 1.5rem;">
+  <source src="./assets/sudheesh-banner.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 # 🧠 Dissect With Sudheesh
 
-Welcome to my **data analytics portfolio** — a growing collection of hands-on case studies in **R**, with more to come in **Python**, **SQL**, and **Tableau**. Each project showcases practical applications of data science concepts with clean code, clear output, and concise insights.
+Hi, I’m **Sudheesh Sreenilayam** — a Business Analytics grad student based in Chicago with 8+ years of experience in operations and customer success.
+
+This is my portfolio of hands-on data science and business analytics projects. I’m currently building in **R**, and will be adding projects in **Python**, **SQL**, and **Tableau** soon.
 
 ---
 
@@ -38,16 +45,13 @@ Explored relationships between crime rate and socioeconomic variables using line
 
 ---
 
-## 👋 About Me
+## 📬 Connect with Me
 
-I'm **Sudheesh Sreenilayam**, a Master’s student in Business Analytics based in Chicago. With 8+ years of professional experience, I now focus on solving business problems through data-driven insights.
-
-- 🎓 Master’s in Business Analytics  
-- 🛠️ Skills: R, SQL, Tableau (in progress), Python (in progress)  
-- 🌱 Open to internships, collaborations, and feedback  
-
-📎 [Connect with me on LinkedIn](https://www.linkedin.com/in/ssudheesh)
+- 📍 Based in Chicago, IL  
+- 💼 Open to internships and collaborations  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/ssudheesh)  
+- 🌐 [GitHub Profile](https://github.com/Sudheeshsreenilayam)
 
 ---
 
-> ⚡ *This site is a living document. More projects are added as I explore new tools, data, and ideas.*
+> ⚡ *This site is a living document — updated regularly as I explore new tools and challenges.*
